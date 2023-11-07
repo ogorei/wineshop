@@ -12,14 +12,17 @@ const Home = ({ products, bannerData }) => {
         <p></p>
       </div>
 
-      {/* <div className="products-container">
+      <div className="products-container">
         {console.log("products",products)}
         {products?.map((product) => (
           <Product key={product._id} product={product} />
         ))}
-      </div> */}
+      </div>
 
       {/* <FooterBanner footerBanner={bannerData && bannerData[0]} /> */}
+  
+    
+    
    </>
   )
 }

@@ -3,8 +3,6 @@ import Link from 'next/link'
 import { AiOutlineShopping } from 'react-icons/ai'
 import Cart from './Cart'
 import { useStateContext } from '../context/StateContext'
-import Image from 'next/image'
-// import {koalaImg} from '../assets/koala.png'
 
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext()
@@ -13,7 +11,10 @@ const Navbar = () => {
     <div className="navbar-container">
       <p className="logo">
         <Link href="/">
-          <Image src="/logo.jpg" width="50" height="50" alt="logo" />
+          <div>
+          <p className='sofia'>SOFIA°</p>
+          <p>ワインの通販オンラインワッシーズ</p>
+          </div>
         </Link>
       </p>
 
