@@ -9,14 +9,14 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      <p className="logo">
+      <div className="logo">
         <Link href="/">
           <div>
           <p className='sofia'>SOFIA°</p>
-          <p>ワインの通販オンラインワッシーズ</p>
+          <p>世界のお酒の専門店</p>
           </div>
         </Link>
-      </p>
+      </div>
 
       <button
         type="button"

@@ -1,11 +1,11 @@
 import React from 'react'
 import { client } from '../lib/client'
-import { Product, FooterBanner, HeroBanner } from '../components'
+import { Product, FooterBanner} from '../components'
 
 const Home = ({ products, bannerData }) => {
   return (
     <>
-      <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
+        <FooterBanner footerBanner={bannerData && bannerData[0]} />
 
       <div className="products-heading">
         <h2>人気商品</h2>
@@ -18,11 +18,6 @@ const Home = ({ products, bannerData }) => {
           <Product key={product._id} product={product} />
         ))}
       </div>
-
-      {/* <FooterBanner footerBanner={bannerData && bannerData[0]} /> */}
-  
-    
-    
    </>
   )
 }
@@ -38,4 +33,4 @@ export const getServerSideProps = async () => {
   }
 }
 
-export default Home
+export default Home;
