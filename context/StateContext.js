@@ -31,11 +31,12 @@ export const StateContext = ({ children }) => {
       setCartItems([...cartItems, { ...product }])
     }
 
-    toast.success(`${qty} ${product.name} added to cart.`)
+    toast.success(`${product.name} カートに追加されました.`)
   }
 
   const onRemove = (product) => {
     foundProduct = cartItems.find((item) => item._id === product._id)
+    console.log("foundProduct",foundProduct)
     const newCartItems = cartItems.filter(item => item._id !== product._id)
     setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.quantity)
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity)
@@ -43,6 +44,7 @@ export const StateContext = ({ children }) => {
   }
 
   const toggleCartItemQuantity = (id, value) => {
+    console.log("id",id);
     foundProduct = cartItems.find((item) => item._id === id)
     index = cartItems.findIndex((item) => item._id === id)
     const newCartItems = cartItems.filter((item) => item._id !== id)
@@ -69,7 +71,7 @@ export const StateContext = ({ children }) => {
       }
     }
   }
-
+  // increase and decrease quantity of items selected
   const incQty = () => {
     setQty((prevQty) => prevQty + 1)
   }
@@ -83,22 +85,22 @@ export const StateContext = ({ children }) => {
 
   return (
     <Context.Provider
-      value={{
-        showCart,
-        setShowCart,
-        cartItems,
-        setCartItems,
-        totalPrice,
-        setTotalPrice,
-        totalQuantities,
-        setTotalQuantities,
-        qty,
-        incQty,
-        decQty,
-        onAdd,
-        toggleCartItemQuantity,
-        onRemove
-      }}
+    value={{
+      showCart,
+      setShowCart,
+      cartItems,
+      setCartItems,
+      totalPrice,
+      setTotalPrice,
+      totalQuantities,
+      setTotalQuantities,
+      qty,
+      incQty,
+      decQty,
+      onAdd,
+      toggleCartItemQuantity,
+      onRemove
+    }}
     >
       { children }
     </Context.Provider>

@@ -244,7 +244,7 @@ text-align: end;
 }
 .cart-container{
   height: 100vh;
-  width: 600px;
+  width: 500px;
   background-color: white;
   float: right;
   padding: 40px 10px;
@@ -625,8 +625,8 @@ margin-top: 160px;
     height: 350px;
   }
   .cart-container{
-    width: 415px;
-  padding: 4px;
+  width: 350px;
+  padding: 5px;
   }
   .cart-heading{
     margin-top: 35px;
