@@ -21,6 +21,7 @@ const ProductDetails = ({ product, products }) => {
           <div className="image-container">
             <img src={urlFor(image && image[index])} className="product-detail-image" />
           </div>
+          {/* carousel */}
           <div className="small-images-container">
             {image?.map((item, i) => (
               <img
@@ -46,11 +47,11 @@ const ProductDetails = ({ product, products }) => {
             </div>
             <p>{20}</p>
           </div>
-          <h4>Details:</h4>
+          <h4>詳細</h4>
           <p>{details}</p>
-          <p className="price">${price}</p>
+          <p className="price">{price.toLocaleString()} 円</p>
           <div className="quantity">
-            <h3>Quantity</h3>
+            <h3>数量</h3>
             <p className="quantity-desc">
               <span className="minus" onClick={decQty}><AiOutlineMinus/></span>
               <span className="num">{qty}</span>
@@ -58,8 +59,8 @@ const ProductDetails = ({ product, products }) => {
             </p>
           </div>
           <div className="buttons">
-            <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Add to cart</button>
-            <button type="button" className="buy-now" onClick={handleBuyNow}>Buy now</button>
+            <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>カートに追加</button>
+            <button type="button" className="buy-now" onClick={handleBuyNow}>購入する</button>
           </div>
         </div>
       </div>
@@ -104,7 +105,7 @@ export const getStaticProps = async ({ params: { slug }}) => {
   const productsQuery = '*[_type == "product"]'
   const product = await client.fetch(query)
   const products = await client.fetch(productsQuery)
-  console.log(products);
+  console.log("staticprops",products);
 
   return {
     props: { product, products }

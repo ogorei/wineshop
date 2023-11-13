@@ -19,9 +19,9 @@ export default async function handler(req, res) {
           const newImage = img.replace('image-', 'https://cdn.sanity.io/images/b352b1i7/production/').replace('-webp', '.webp');
 
           return {
-            price_data: { 
-              currency: 'usd',
-              product_data: { 
+            price_data: {
+              currency: 'jpn',
+              product_data: {
                 name: item.name,
                 images: [newImage],
               },
