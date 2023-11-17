@@ -92,7 +92,6 @@ export const getStaticPaths = async () => {
       slug: product.slug.current
     }
   }))
-  console.log(paths);
 
   return {
     paths,
@@ -105,7 +104,6 @@ export const getStaticProps = async ({ params: { slug }}) => {
   const productsQuery = '*[_type == "product"]'
   const product = await client.fetch(query)
   const products = await client.fetch(productsQuery)
-  console.log("staticprops",products);
 
   return {
     props: { product, products }
