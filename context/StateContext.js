@@ -36,7 +36,6 @@ export const StateContext = ({ children }) => {
 
   const onRemove = (product) => {
     foundProduct = cartItems.find((item) => item._id === product._id)
-    console.log("foundProduct",foundProduct)
     const newCartItems = cartItems.filter(item => item._id !== product._id)
     setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.quantity)
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity)
@@ -44,7 +43,6 @@ export const StateContext = ({ children }) => {
   }
 
   const toggleCartItemQuantity = (id, value) => {
-    console.log("id",id);
     foundProduct = cartItems.find((item) => item._id === id)
     index = cartItems.findIndex((item) => item._id === id)
     const newCartItems = cartItems.filter((item) => item._id !== id)

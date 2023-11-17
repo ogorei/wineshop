@@ -26,7 +26,7 @@ const Success = () => {
         <p className="description">
         ご不明な点がございましたらご連絡ください
           <a href="mailto:order@koalamarket.com" className="email">
-            order@sofia.co
+            order@sofia.com
           </a>
         </p>
         <Link href="/">
