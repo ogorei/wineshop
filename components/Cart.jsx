@@ -56,9 +56,9 @@ const Cart = () => {
               <img src={urlFor(item?.image[0])} className="cart-product-image" />
               <div className="item-desc">
                 <div className="flex top">
-                  <h5>{item.name}</h5>
-                  <h4>{item.price.toLocaleString()} 円</h4>
+                  <h4>{item.name}</h4>
                 </div>
+                  <h4>{item.price.toLocaleString()} 円</h4>
                 <div className="flex bottom">
                   <div>
                     <p className="quantity-desc">
@@ -83,7 +83,7 @@ const Cart = () => {
           <div className="cart-bottom">
             <div className="total">
               <h3>小計: </h3>
-              <h3>{totalPrice.toLocaleString()}</h3>
+              <h3>{totalPrice.toLocaleString()}円</h3>
             </div>
             <div className="btn-container">
               <button type="button" className="btn" onClick={handleCheckout}>Stripeで支払う</button>
