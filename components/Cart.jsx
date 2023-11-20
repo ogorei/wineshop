@@ -58,7 +58,7 @@ const Cart = () => {
                 <div className="flex top">
                   <h4>{item.name}</h4>
                 </div>
-                  <h4>{item.price.toLocaleString()} 円</h4>
+                  <h4>{item.price.toLocaleString()}円</h4>
                 <div className="flex bottom">
                   <div>
                     <p className="quantity-desc">
