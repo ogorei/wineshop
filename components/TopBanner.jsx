@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { urlFor } from '../lib/client'
 
-const FooterBanner = ({ footerBanner: {discount, largeText1, largeText2, saleTime, smallText, midText, buttonText, image, desc, product} }) => {
+const TopBanner = ({ topBanner: {discount, largeText1, largeText2, saleTime, smallText, midText, buttonText, image, desc, product} }) => {
   return (
     <div className="footer-banner-container">
       <div className="banner-desc">
@@ -20,4 +19,4 @@ const FooterBanner = ({ footerBanner: {discount, largeText1, largeText2, saleTim
   )
 }
 
-export default FooterBanner
+export default TopBanner;

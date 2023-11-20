@@ -1,11 +1,12 @@
 import React from 'react'
 import { client } from '../lib/client'
-import { Product, FooterBanner} from '../components'
+import { Menu, Product, TopBanner} from '../components'
 
 const Home = ({ products, bannerData }) => {
   return (
     <>
-        <FooterBanner footerBanner={bannerData && bannerData[0]} />
+        <TopBanner topBanner={bannerData && bannerData[0]} />
+        <Menu/>
 
       <div className="products-heading">
         <h2>人気商品</h2>
