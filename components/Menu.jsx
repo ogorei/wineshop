@@ -6,35 +6,29 @@ import { useStateContext } from "../context/StateContext";
 
 const menuItems = [
 	{
-		title_jp: "ランキング",
-		title_en: "Ranking"
+		title_jp: "ランキング"
 	},
 	{
-		title_jp: "ワイナリー一覧",
-		title_en: "Wineries"
+		title_jp: "ワイナリー一覧"
 	},
 	{
-		title_jp: "スタッフブログ",
-		title_en: "Blog"
+		title_jp: "スタッフブログ"
 	}
 ];
 
 const Menu = () => {
 	return (
-		<div className="menu-container">
+		<section className="menu-container">
 			{menuItems.map((item) => {
 				return (
-					<div className="menu-item">
-						<Link href="/">
-							<div>
-								<p className="menu-title">{item.title_en}</p>
-								<p>{item.title_jp}</p>
-							</div>
-						</Link>
-					</div>
+					<nav className="menu-items">
+						<li>
+							<a href="">{item.title_jp}</a>
+						</li>
+					</nav>
 				);
 			})}
-		</div>
+		</section>
 	);
 };
 
