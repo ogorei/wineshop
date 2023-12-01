@@ -1,5 +1,5 @@
 {
-  "name": "next-app",
+  "name": "ecommerce",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.16.7",
-    "eslint": "8.25.0",
-    "eslint-config-next": "12.3.1"
+    "eslint": "8.13.0",
+    "eslint-config-next": "12.1.4"
   }
 }
