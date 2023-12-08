@@ -41,7 +41,7 @@ const Cart = () => {
         </button>
 
         {cartItems.length < 1 && (
-          <div className="empty-cart">
+          <div className="flex flex-col items-center">
             <AiOutlineShopping size={150} />
             <h3>買い物かごには商品が入っていません。</h3>
             <Link href="/">
@@ -60,13 +60,13 @@ const Cart = () => {
                 </div>
                   <h4>{item.price.toLocaleString()}円</h4>
                 <div className="flex bottom">
-                  <div>
-                    <p className="quantity-desc">
-                      <span className="minus" onClick={() => toggleCartItemQuantity(item._id, 'dec')} ><AiOutlineMinus/></span>
-                      <span className="num">{item.quantity}</span>
-                      <span className="plus" onClick={() => toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus/></span>
-                    </p>
+                <div>
+                  <div className="flex items-center">数量：
+                    <span className="mx-2 bg-red-500 text-white bold" onClick={() => toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus/></span>
+                    <span className="">{item.quantity}</span>
+                    <span className="mx-2 bg-green-500 text-white bold" onClick={() => toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus/></span>
                   </div>
+                </div>
                   <button
                     type="button"
                     className="remove-item"

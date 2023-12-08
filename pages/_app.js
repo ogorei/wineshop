@@ -1,6 +1,7 @@
 import React from 'react'
 import { Layout } from '../components'
 import '../styles/globals.css'
+import '../styles/Home.module.css'
 import { StateContext } from '../context/StateContext'
 import { Toaster } from 'react-hot-toast'
 
