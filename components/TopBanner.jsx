@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 
-const TopBanner = ({ topBanner: {discount, largeText1, largeText2, saleTime, smallText, midText, buttonText, image, desc, product} }) => {
+const TopBanner = () => {
   return (
     <div className="top-banner-container">
+      <img src='https://i.gyazo.com/1129710955975adba16f219332e12754.png'/>
     </div>
   )
 }

@@ -21,7 +21,6 @@
 }
 .menu-container {
 	display: flex;
-	background-color: #2f241b;
 	justify-content: center;
 	position: relative;
 }
@@ -31,8 +30,7 @@
 	margin: 1%;
 }
 .menu-items li {
-	border-bottom: 1px solid #2f241b;
-	color: #fef2e2;
+	color: #2f241b;
 	text-align: center;
 	font-weight: 700;
 	padding: 0 1.50rem;
@@ -198,13 +196,10 @@ span.text-red {
 	font-weight: 200;
 }
 .top-banner-container {
+	margin-top: 1%;
 	display: flex;
 	position: relative;
-	height: 500px;
 	width: 100%;
-	background-image: url('https://i.gyazo.com/1129710955975adba16f219332e12754.png');
-	background-size: 100%;
-	background-repeat: no-repeat;
 }
 .banner-desc {
 	text-shadow: #2f241b 1px 0 10px;
@@ -386,13 +381,6 @@ span.text-red {
 }
 .btn:hover {
 	transform: scale(1.1, 1.1);
-}
-.product-detail-container {
-	display: flex;
-	gap: 40px;
-	margin: 40px;
-	margin-top: 60px;
-	color: #324d67;
 }
 
 .product-detail-image {

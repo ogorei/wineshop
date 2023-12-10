@@ -2,6 +2,10 @@ import React from "react";
 
 const menuItems = [
 	{
+		title_jp: "ホーム",
+		url: "/"
+	},
+	{
 		title_jp: "ランキング",
 		url: "/ranking"
 	},

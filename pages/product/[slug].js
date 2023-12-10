@@ -16,7 +16,7 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <div>
-      <div className="product-detail-container">
+      <div className="flex justify-center items-center">
         <div>
           <div className="image-container">
             <img src={urlFor(image && image[index])} className="product-detail-image" />
@@ -47,8 +47,8 @@ const ProductDetails = ({ product, products }) => {
               <span className="mx-2 bg-green-500 text-white bold" onClick={incQty}><AiOutlinePlus/></span>
             </div>
           </div>
-          <div className="flex">
-            <button type="button" className="border m-2 p-2" onClick={() => onAdd(product, qty)}>カートに追加</button>
+          <div className="flex mt-2">
+            <button type="button" className="border my-2 p-2" onClick={() => onAdd(product, qty)}>カートに追加</button>
             <button type="button" className="bg-red-900 text-white border m-2 p-2" onClick={handleBuyNow}>購入する</button>
           </div>
         </div>
