@@ -16,7 +16,7 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <div>
-      <div className="product-detail-container">
+      <div className="flex justify-center items-center">
         <div>
           <div className="image-container">
             <img src={urlFor(image && image[index])} className="product-detail-image" />
@@ -35,32 +35,21 @@ const ProductDetails = ({ product, products }) => {
             ))}
           </div>
         </div>
-        <div className="product-detail-desc">
-          <h1>{name}</h1>
-          <div className="reviews">
-            <div>
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiOutlineStar />
-            </div>
-            <p>{20}</p>
-          </div>
-          <h4>詳細</h4>
+        <div className="flex flex-col">
+          <h1 className='font-bold'>{name}</h1>
+          <h4 className='my-2'>詳細</h4>
           <p>{details}</p>
-          <p className="price">{price.toLocaleString()} 円</p>
-          <div className="quantity">
-            <h3>数量</h3>
-            <p className="quantity-desc">
-              <span className="minus" onClick={decQty}><AiOutlineMinus/></span>
-              <span className="num">{qty}</span>
-              <span className="plus" onClick={incQty}><AiOutlinePlus/></span>
-            </p>
+          <p className="font-bold">{price.toLocaleString()} 円</p>
+          <div>
+            <div className="flex items-center">数量：
+              <span className="mx-2 bg-red-500 text-white bold" onClick={decQty}><AiOutlineMinus/></span>
+              <span className="">{qty}</span>
+              <span className="mx-2 bg-green-500 text-white bold" onClick={incQty}><AiOutlinePlus/></span>
+            </div>
           </div>
-          <div className="buttons">
-            <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>カートに追加</button>
-            <button type="button" className="buy-now" onClick={handleBuyNow}>購入する</button>
+          <div className="flex mt-2">
+            <button type="button" className="border my-2 p-2" onClick={() => onAdd(product, qty)}>カートに追加</button>
+            <button type="button" className="bg-red-900 text-white border m-2 p-2" onClick={handleBuyNow}>購入する</button>
           </div>
         </div>
       </div>

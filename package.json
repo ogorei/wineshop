@@ -1,5 +1,5 @@
 {
-  "name": "next-app",
+  "name": "ecommerce",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.17.9",
+    "@portabletext/react": "^3.0.11",
     "@sanity/client": "^3.2.0",
     "@sanity/image-url": "^1.0.1",
     "@stripe/stripe-js": "^1.25.0",
@@ -24,7 +25,10 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.16.7",
-    "eslint": "8.25.0",
-    "eslint-config-next": "12.3.1"
+    "autoprefixer": "^10.4.16",
+    "eslint": "8.13.0",
+    "eslint-config-next": "12.1.4",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
   }
 }

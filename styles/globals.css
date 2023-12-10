@@ -1,21 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-html,
-body,
-* {
-	padding: 0;
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-		Helvetica Neue, sans-serif;
-	box-sizing: border-box;
-}
-::-webkit-scrollbar {
-	width: 0px;
-}
 
-a {
-	color: inherit;
-	text-decoration: none;
-}
 
 .main-container {
 	max-width: 1400px;
@@ -34,7 +21,6 @@ a {
 }
 .menu-container {
 	display: flex;
-	background-color: #2f241b;
 	justify-content: center;
 	position: relative;
 }
@@ -44,8 +30,7 @@ a {
 	margin: 1%;
 }
 .menu-items li {
-	border-bottom: 1px solid #2f241b;
-	color: #fef2e2;
+	color: #2f241b;
 	text-align: center;
 	font-weight: 700;
 	padding: 0 1.50rem;
@@ -133,6 +118,7 @@ span.text-red {
 	position: absolute;
 	right: -8px;
 	font-size: 12px;
+	top: 10px;
 	color: #eee;
 	background-color: #a31818;
 	width: 18px;
@@ -210,13 +196,10 @@ span.text-red {
 	font-weight: 200;
 }
 .top-banner-container {
+	margin-top: 1%;
 	display: flex;
 	position: relative;
-	height: 600px;
 	width: 100%;
-	background-image: url('https://i.gyazo.com/c892de9dc005cc1e9eb6165cb159b5b6.jpg');
-	background-size: 100%;
-	background-repeat: no-repeat;
 }
 .banner-desc {
 	text-shadow: #2f241b 1px 0 10px;
@@ -398,13 +381,6 @@ span.text-red {
 }
 .btn:hover {
 	transform: scale(1.1, 1.1);
-}
-.product-detail-container {
-	display: flex;
-	gap: 40px;
-	margin: 40px;
-	margin-top: 60px;
-	color: #324d67;
 }
 
 .product-detail-image {
@@ -613,8 +589,7 @@ span.text-red {
 	}
 
 	.top-banner-container {
-		height: 500px;
-		background-image: url('https://i.gyazo.com/98809ac2c77fa716710d8ec93dc330dd.jpg');
+		background-image: url('https://i.gyazo.com/febee7084a8ad7a80d31ca98279498e3.png');
 	}
 	.banner-desc .big-title {
 		font-size: 30px;

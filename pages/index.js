@@ -5,7 +5,6 @@ import { Menu, Product, TopBanner} from '../components'
 const Home = ({ products, bannerData }) => {
   return (
     <>
-        <Menu/>
         <TopBanner topBanner={bannerData && bannerData[0]} />
 
       <div className="products-heading">
