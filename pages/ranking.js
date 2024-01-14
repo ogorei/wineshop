@@ -9,7 +9,7 @@ const Ranking = ({ products }) => {
 
   return (
   
-    <div>blog</div>
+    <div>ranking comming soon</div>
   )
 }
 

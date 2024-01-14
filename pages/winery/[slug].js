@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 import { client, urlFor } from "../../lib/client";
-import { PortableText } from "@portabletext/react";
 
-const BlogDetails = ({ post }) => {
-	const { image, title, overview, content, author } = post;
-	console.log(1, content);
+const WineryDetails = ({ post }) => {
+	const { image, title, overview, description } = post;
 	const [index, setIndex] = useState(0);
 
 	return (
 		<div>
 			<div className="md:p-10 flex flex-col md:flex-row justify-center items-center">
-				<div className="w-full md:w-2/5">
-					<img src={urlFor(image && image[index])} />
-				</div>
+				<img className="" src={urlFor(image && image[index])} />
+
 				<div className="w-full md:w-3/5 p-6 md:pl-4 text-center">
-					<h1 className="font-bold text-xl">
+					<h1 className="font-bold text-xl text-red-800">
 						{title}
 					</h1>
 					<p className="mt-2 md:p-8 leading-relaxed">
@@ -23,14 +20,16 @@ const BlogDetails = ({ post }) => {
 				</div>
 			</div>
 			<div className="px-5 md:px-10">
-				<PortableText value={content} />
+				<p>
+					{description}
+				</p>
 			</div>
 		</div>
 	);
 };
 
 export const getStaticPaths = async () => {
-	const query = `*[_type == "post"] {
+	const query = `*[_type == "wineries"] {
     slug {
       current
     }
@@ -50,7 +49,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params: { slug } }) => {
-	const query = `*[_type == "post" && slug.current == '${slug}'][0]`;
+	const query = `*[_type == "wineries" && slug.current == '${slug}'][0]`;
 	const post = await client.fetch(query);
 	console.log(post);
 
@@ -59,4 +58,4 @@ export const getStaticProps = async ({ params: { slug } }) => {
 	};
 };
 
-export default BlogDetails;
+export default WineryDetails;
