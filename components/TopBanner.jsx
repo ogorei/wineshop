@@ -5,8 +5,8 @@ import Menu from './Menu';
 const TopBanner = () => {
   return (
     <div className="top-banner-container">
-    <img className='hidden md:flex' src='https://i.gyazo.com/bb277dd126b2a55ff79e178243c426e0.jpg'/>
-    <img className='md:hidden' src='https://i.gyazo.com/a3f903bba4a0a344c78da3c14d61b00c.jpg'/>
+    <img className='hidden md:flex' src='https://i.gyazo.com/1129710955975adba16f219332e12754.png'/>
+    <img className='md:hidden' src='https://i.gyazo.com/febee7084a8ad7a80d31ca98279498e3.png'/>
   </div>
   )
 }
