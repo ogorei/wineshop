@@ -22,7 +22,7 @@
 .menu-container {
 	display: flex;
 	justify-content: center;
-	position: relative;
+	background-image: url("https://i.gyazo.com/4b6ec3580b44f4e5b47451110d45deb0.jpg");
 }
 .menu-items {
 	list-style: none;
@@ -104,12 +104,12 @@ span.text-red {
 }
 .cart-icon {
 	font-size: 25px;
-	color: gray;
+	color: #fff;
 	cursor: pointer;
 	position: relative;
 	transition: transform .4s ease;
 	border: none;
-	background-color: transparent;
+	background-color: #c6bf2d;
 }
 .cart-icon:hover {
 	transform: scale(1.1, 1.1);
@@ -198,8 +198,8 @@ span.text-red {
 .top-banner-container {
 	margin-top: 1%;
 	display: flex;
-	position: relative;
-	width: 100%;
+	object-fit: cover;
+	max-height: 700px;
 }
 .banner-desc {
 	text-shadow: #2f241b 1px 0 10px;
@@ -580,16 +580,16 @@ span.text-red {
 }
 
 @media screen and (max-width: 800px) {
+
+	.top-banner-container {
+		margin-top: 0px;
+	}
 	.menu-container {
 		position: relative;
 	}
 	.menu-items li {
 		font-size: 13px;
 		padding: 15px;
-	}
-
-	.top-banner-container {
-		background-image: url('https://i.gyazo.com/febee7084a8ad7a80d31ca98279498e3.png');
 	}
 	.banner-desc .big-title {
 		font-size: 30px;
@@ -632,9 +632,6 @@ span.text-red {
 		margin: 20px;
 	}
 
-	.item-desc .flex {
-		width: 200px;
-	}
 	.top {
 		flex-wrap: wrap;
 		gap: 10px;

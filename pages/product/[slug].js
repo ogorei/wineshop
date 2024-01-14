@@ -16,9 +16,9 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <div>
-      <div className="flex justify-center items-center">
+      <div className="flex flex-col  md:flex-row justify-evenly items-center">
         <div>
-          <div className="image-container">
+          <div className="">
             <img src={urlFor(image && image[index])} className="product-detail-image" />
           </div>
           {/* carousel */}

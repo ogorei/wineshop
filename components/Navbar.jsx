@@ -32,7 +32,7 @@ const Navbar = () => {
         <Cart />
       }
     </div>
-    <div>
+    <div className='flex justify-center'>
       <Menu/>
     </div>
     </div>
